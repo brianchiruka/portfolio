@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: linear-gradient(
+    217deg,
+    rgba(116, 0, 0, 0.5),
+    rgba(0, 102, 255, 0.8) 10.71%
+  );
+}
+
+a {
+  text-decoration: none;
+}

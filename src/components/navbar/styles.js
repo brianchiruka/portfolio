@@ -1,0 +1,27 @@
+import { makeStyles } from "@material-ui/core";
+
+export default makeStyles((theme) => ({
+  logo: {
+    display: "flex",
+    alignItems: "center",
+    fontFamily: "DR-RAYMOND Display",
+    flexGrow: 2,
+  },
+
+  navbarContainer: {
+    display: "flex",
+    alignItems: "center",
+    marginTop: 40,
+    marginBottom: 60,
+  },
+
+  links: {
+    marginRight: 40,
+    fontFamily: "Calibri",
+    fontSize: 18,
+    color: "black",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
+}));
