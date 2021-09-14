@@ -2,7 +2,7 @@ import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
-import Info from "./info/Info";
+import Info from "../../components/info/Info";
 
 const Resume = () => {
   const classes = useStyles();

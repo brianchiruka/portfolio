@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Work from "./pages/work/Work";
 import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Work />
         <Resume />
         <About />
+        <Contact />
       </Container>
     </Router>
   );

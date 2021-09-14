@@ -1,8 +1,9 @@
 import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
-import { Card } from "./card/Card";
+import { Card } from "../../components/card/Card";
 import { Container, Typography } from "@material-ui/core";
+import store from "../../images/store.png";
 
 const Work = () => {
   const classes = useStyles();
@@ -13,10 +14,13 @@ const Work = () => {
         <Typography variant="h2" className={classes.work}>
           Selected Work
         </Typography>
-        <Card />
+        <Card
+          title="e-commerce store"
+          subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, SendGrid API. 2021"
+          img={store}
+        />
       </Container>
       {/* Todo: 
-      1. Use props to render card
       2. put a modal over the card to choose between view code and live demo 
       */}
     </>

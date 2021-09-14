@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export default makeStyles((theme) => ({
   project: {
+    position: "relative",
     height: 650,
     width: 450,
     borderRadius: 20,
