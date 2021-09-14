@@ -11,9 +11,4 @@ export default makeStyles((theme) => ({
     fontFamily: "Calibre Medium",
     margin: 0,
   },
-  paragraph: {
-    fontFamily: "Calibre Light",
-    fontSize: 24,
-    marginBottom: 20,
-  },
 }));
