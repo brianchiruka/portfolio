@@ -1,16 +1,15 @@
-import { Box, Container, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 import Photo from "../../images/potrait.jpg";
-import { borderRadius } from "@material-ui/system";
 
 const Hero = () => {
   const classes = useStyles();
 
   return (
     <>
-      <Box display="flex" style={{ marginBottom: 200 }}>
-        <Container style={{ flexGrow: 3 }}>
+      <Grid container style={{ marginBottom: 200 }}>
+        <Grid item lg={9} sm={12} style={{ flexGrow: 3 }}>
           <Typography variant="h1" className={classes.heading}>
             Hi, I'm Brian,
           </Typography>
@@ -30,8 +29,8 @@ const Hero = () => {
             piano🎹.
           </Typography>
           <br />
-        </Container>
-        <Container style={{ flexShrink: 2 }}>
+        </Grid>
+        <Grid item lg={3} sm={12} style={{ flexShrink: 2 }}>
           <img
             style={{
               width: 300,
@@ -40,8 +39,8 @@ const Hero = () => {
             }}
             src={Photo}
           />
-        </Container>
-      </Box>
+        </Grid>
+      </Grid>
     </>
   );
 };

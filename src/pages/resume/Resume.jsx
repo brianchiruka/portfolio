@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Info from "../../components/info/Info";
 
 const Resume = () => {
@@ -9,13 +9,15 @@ const Resume = () => {
 
   return (
     <>
-      <Container display="flex" style={{ marginBottom: 200 }}>
-        <Dot style={{ position: "relative" }} />
-        <Typography variant="h2" className={classes.resume}>
-          Résumé
-        </Typography>
-        <Box display="flex">
-          <Container styles={{ flexGrow: 2 }}>
+      <Grid container style={{ marginBottom: 200 }}>
+        <Grid item>
+          <Dot style={{ position: "relative" }} />
+          <Typography variant="h2" className={classes.resume}>
+            Résumé
+          </Typography>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item lg={6} md={6} sm={12} styles={{ flexGrow: 2 }}>
             <Info
               heading="Work experience"
               title="LifeCheq"
@@ -41,8 +43,8 @@ const Resume = () => {
               description="Technician"
               dates="2017 - 2018"
             />
-          </Container>
-          <Container>
+          </Grid>
+          <Grid item lg={6} md={6} sm={12}>
             <Info
               heading="Education"
               title="Milpark"
@@ -56,9 +58,9 @@ const Resume = () => {
               description="N. Dip Electrical Engineering"
               dates="2014 - 2016"
             />
-          </Container>
-        </Box>
-      </Container>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   );
 };
