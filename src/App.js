@@ -8,6 +8,7 @@ import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import theme from "./theme";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Resume />
           <About />
           <Contact />
+          <Footer />
         </Container>
       </Router>
     </ThemeProvider>

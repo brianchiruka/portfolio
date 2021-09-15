@@ -35,6 +35,16 @@ theme.overrides = {
       fontFamily: "DR-RAYMOND Display",
     },
   },
+
+  MuiInputOutlined: {
+    fullWidth: {
+      maxWidth: 500,
+    },
+  },
+
+  // MuiInputLabel: {
+  //   root: {},
+  // },
 };
 
 export default theme;
