@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 
 const Footer = () => {
@@ -6,7 +6,9 @@ const Footer = () => {
     date = currentYear.getFullYear();
   return (
     <>
-      <Typography>Made with ❤️ by me. @ {date}</Typography>
+      <Grid container justifyContent="center">
+        <Typography>☠ {date} • Made with ❤️ in JHB. •</Typography>
+      </Grid>
     </>
   );
 };

@@ -3,6 +3,7 @@ import useStyles from "./styles";
 import potrait1 from "../../images/potrait1.jpg";
 import { ReactComponent as Dot } from "./dot.svg";
 import {
+  Button,
   Grid,
   TextareaAutosize,
   TextField,
@@ -67,6 +68,9 @@ const Contact = () => {
                   />
                 </Typography>
               </Grid>
+              <Button variant="contained" fullWidth>
+                Send
+              </Button>
             </Grid>
           </Grid>
         </Grid>
