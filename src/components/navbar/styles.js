@@ -16,7 +16,6 @@ export default makeStyles((theme) => ({
   },
 
   links: {
-    marginRight: 40,
     fontFamily: "Calibri",
     fontSize: 18,
     color: "black",

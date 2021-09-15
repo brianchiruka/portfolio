@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "./styles";
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { ReactComponent as Logo } from "./logo.svg";
 import { HashLink as Link } from "react-router-hash-link";
 import { Box } from "@material-ui/core";
@@ -11,34 +11,39 @@ const Navbar = () => {
     spacing: [0, 2, 4, 8],
   };
   return (
-    <Box display="flex" alignItems="center" className={classes.navbarContainer}>
-      <Typography variant="h6" className={classes.logo}>
-        <Logo />
-        brianchiruka
-      </Typography>
-      <Box>
-        <Box display="inline" alignItems="center" m={2}>
-          <Link to="home" className={classes.links}>
-            Work
-          </Link>
-        </Box>
-        <Box display="inline" alignItems="center" m={2}>
-          <Link to="home" className={classes.links}>
-            Résumé
-          </Link>
-        </Box>
-        <Box display="inline" alignItems="center" m={2}>
-          <Link to="home" className={classes.links}>
-            About
-          </Link>
-        </Box>
-        <Box display="inline" alignItems="center" m={2}>
-          <Link to="home" className={classes.links}>
-            Contact
-          </Link>
-        </Box>
-      </Box>
-    </Box>
+    <Grid
+      container
+      spacing={6}
+      alignItems="center"
+      className={classes.navbarContainer}
+    >
+      <Grid item lg={8} md={6} sm={6} xs={12}>
+        <Typography variant="h6" className={classes.logo}>
+          <Logo />
+          brianchiruka
+        </Typography>
+      </Grid>
+      <Grid item alignItems="center" m={1}>
+        <Link to="home" className={classes.links}>
+          Work
+        </Link>
+      </Grid>
+      <Grid item alignItems="center" m={1}>
+        <Link to="home" className={classes.links}>
+          Résumé
+        </Link>
+      </Grid>
+      <Grid item alignItems="center" m={1}>
+        <Link to="home" className={classes.links}>
+          About
+        </Link>
+      </Grid>
+      <Grid item alignItems="center" m={1}>
+        <Link to="home" className={classes.links}>
+          Contact
+        </Link>
+      </Grid>
+    </Grid>
   );
 };
 
