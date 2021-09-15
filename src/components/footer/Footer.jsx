@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Grid container justifyContent="center">
-        <Typography>☠ {date} • Made with ❤️ in JHB. •</Typography>
+        <Typography variant="h6">☠ {date} • Made with ❤️ in JHB. •</Typography>
       </Grid>
     </>
   );

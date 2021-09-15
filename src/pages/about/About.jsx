@@ -12,16 +12,15 @@ const About = () => {
         <Typography variant="h2" className={classes.about}>
           About me
         </Typography>
-        <Typography variant="h5" className={classes.bold}>
+        <Typography variant="h4" className={classes.bold}>
           Who am I?
         </Typography>
         <Typography variant="body1">
           My name is Brian Chiruka, and I am a Web developer and Visual Designer
-          based in JHB, ZA. I have technical experience working with circuit
-          boards, client experience on commercial services and a background in
-          Front-End Development.
+          based in JHB, ZA. My technical experience started with with me fiddling with breadboards and microprocessors to create logic circuits using C and Assembly. My professional background is an equal split between tech
+          and client experience on commercial services.
         </Typography>
-        <Typography variant="h5" className={classes.bold}>
+        <Typography variant="h4" className={classes.bold}>
           What do I do?
         </Typography>
         <Typography variant="body1">
@@ -31,7 +30,7 @@ const About = () => {
           Development, I understand the constraints of the web and am able to
           design and build around them effectively.
         </Typography>
-        <Typography variant="h5" className={classes.bold}>
+        <Typography variant="h4" className={classes.bold}>
           What am I passionate about?
         </Typography>
         <Typography variant="body1">

@@ -9,6 +9,6 @@ export default makeStyles((theme) => ({
   },
   bold: {
     fontFamily: "Calibre Medium",
-    margin: 0,
+    marginBottom: 20,
   },
 }));
