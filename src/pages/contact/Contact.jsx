@@ -7,12 +7,10 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <>
-      <Container>
-        <Dot style={{ position: "relative" }} />
-        <Typography variant="h2" className={classes.contact}>
-          Contact
-        </Typography>
-      </Container>
+      <Dot style={{ position: "relative" }} />
+      <Typography variant="h2" className={classes.contact}>
+        Contact
+      </Typography>
     </>
   );
 };

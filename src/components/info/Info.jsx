@@ -7,22 +7,17 @@ const Info = ({ heading, title, description, dates, link }) => {
   const classes = useStyles();
   return (
     <>
-      <Typography
-        variant="h3"
-        style={{ fontFamily: "DR-RAYMOND Display", marginBottom: 40 }}
-      >
+      <Typography variant="h3" style={{ marginBottom: 40 }}>
         {heading}
       </Typography>
-      <Typography variant="h4" className={classes.info}>
+      <Typography variant="h4">
         <a href={link} target="_blank" className={classes.link}>
           {title}
           <Icon className={classes.emoji} />
         </a>
       </Typography>
-      <Typography variant="h5" className={classes.info}>
-        {description}
-      </Typography>
-      <Typography variant="h6" className={classes.info}>
+      <Typography variant="h5">{description}</Typography>
+      <Typography variant="h6">
         <i>{dates}</i>
       </Typography>
     </>

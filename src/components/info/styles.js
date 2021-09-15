@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
 export default makeStyles(() => ({
-  info: {
-    fontFamily: "Calibre Light",
-  },
   link: {
     fontFamily: "Calibre Medium",
     textDecoration: "none",

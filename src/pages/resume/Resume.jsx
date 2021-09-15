@@ -55,7 +55,7 @@ const Resume = () => {
             <Info
               title="Central University of Technology"
               link="https://www.cut.ac.za"
-              description="N. Dip Electrical Engineering"
+              description="Electrical Engineering"
               dates="2014 - 2016"
             />
           </Grid>
