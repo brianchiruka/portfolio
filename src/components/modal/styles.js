@@ -7,6 +7,10 @@ export default makeStyles((theme) => ({
     right: 30,
     justifyContent: "center",
     alignItems: "center",
+    opacity: 0,
+    "&:hover": {
+      opacity: 1,
+    },
   },
   modalCover: {
     height: 650,
@@ -16,15 +20,24 @@ export default makeStyles((theme) => ({
     paddingLeft: 30,
     paddingRight: 30,
     background: "black",
-    opacity: 1,
-
     "&:hover": {
       opacity: 0.5,
-      cursor: "pointer",
     },
-    live: {
-      position: "relative",
-      bottom: 500,
-    },
+  },
+  live: {
+    color: "white",
+    position: "absolute",
+    bottom: 390,
+    left: 180,
+    fontFamily: "Calibre",
+    fontSize: 28,
+  },
+  code: {
+    color: "white",
+    position: "absolute",
+    bottom: 300,
+    left: 180,
+    fontFamily: "Calibre",
+    fontSize: 28,
   },
 }));

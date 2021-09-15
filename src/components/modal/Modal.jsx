@@ -7,8 +7,24 @@ const Modal = () => {
   return (
     <>
       <div className={classes.modal}>
-        <span className={classes.modalCover} />
-        <Button className={classes.live}>Live Demo</Button>
+        <canvas className={classes.modalCover} />
+
+        <Button
+          variant="contained"
+          href="https://shopforever.netlify.app/"
+          target="_blank"
+          className={classes.live}
+        >
+          Live Demo
+        </Button>
+        <Button
+          variant="contained"
+          href="https://shopforever.netlify.app/"
+          target="_blank"
+          className={classes.code}
+        >
+          View code
+        </Button>
       </div>
     </>
   );

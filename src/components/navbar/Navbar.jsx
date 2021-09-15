@@ -3,13 +3,10 @@ import useStyles from "./styles";
 import { Grid, Typography } from "@material-ui/core";
 import { ReactComponent as Logo } from "./logo.svg";
 import { HashLink as Link } from "react-router-hash-link";
-import { Box } from "@material-ui/core";
 
 const Navbar = () => {
   const classes = useStyles();
-  const theme = {
-    spacing: [0, 2, 4, 8],
-  };
+
   return (
     <Grid
       container
