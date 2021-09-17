@@ -1,15 +1,18 @@
 import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
-import { Grid, Typography } from "@material-ui/core";
+import { Button, Grid, Typography } from "@material-ui/core";
 import Info from "../../components/info/Info";
+import Skills from "../../components/skills/Skills";
 
 const Resume = () => {
   const classes = useStyles();
+  const animateFrom = { opacity: 0, y: -40 };
+  const animateTo = { opacity: 1, y: 0 };
 
   return (
     <>
-      <Grid container style={{ marginBottom: 200 }}>
+      <Grid container className={classes.sectionMargin}>
         <Grid item>
           <Dot style={{ position: "relative" }} />
           <Typography variant="h2" className={classes.resume}>
@@ -17,7 +20,7 @@ const Resume = () => {
           </Typography>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item lg={6} md={6} sm={12} styles={{ flexGrow: 2 }}>
+          <Grid item lg={6} md={6} sm={6} xs={6} styles={{ flexGrow: 2 }}>
             <Info
               heading="Work experience"
               title="LifeCheq"
@@ -44,7 +47,7 @@ const Resume = () => {
               dates="2017 - 2018"
             />
           </Grid>
-          <Grid item lg={6} md={6} sm={12}>
+          <Grid item lg={6} md={6} sm={6} xs={6}>
             <Info
               heading="Education"
               title="Milpark"
@@ -58,7 +61,40 @@ const Resume = () => {
               description="Electrical Engineering"
               dates="2014 - 2016"
             />
+            <br />
+            <Info
+              heading="Online Courses"
+              title="Udemy"
+              link="https://www.cut.ac.za"
+              description="Electrical Engineering"
+              dates="2014 - 2016"
+            />
           </Grid>
+          <Grid item lg={6} md={6} sm={6} xs={6}>
+            <Skills
+              title="Skills"
+              text1="Product Design"
+              text2="UI/UX Design"
+              text3="Sales & Client Experience"
+              text4="Web Development"
+              text5="Learning on the go!"
+            />
+          </Grid>
+          <Grid item lg={6} md={6} sm={6} xs={6}>
+            <Skills
+              title="Tools"
+              text1="Adobe XD"
+              text2="Sketch"
+              text3="Firebase"
+              text4="MaterialUI"
+              text5="HTML, CSS & Vanilla JS"
+              text6="React, Bootstrap & Redux"
+              text7="GIT"
+            />
+          </Grid>
+        </Grid>
+        <Grid item gutterBottom>
+          <Button variant="outlined">Download Résumé</Button>
         </Grid>
       </Grid>
     </>

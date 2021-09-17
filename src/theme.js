@@ -5,46 +5,77 @@ const theme = createTheme({
     fontFamily: "Calibre Medium",
     margin: 0,
   },
+  sectionMargin: {
+    marginBottom: 200,
+  },
 });
 
 theme.overrides = {
+  MuiButton: {
+    root: {
+      margin: 2,
+      fontFamily: "Calibre Light",
+    },
+  },
+
   MuiTypography: {
     h1: {
       fontFamily: "DR-RAYMOND Display",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 34,
+      },
     },
     h2: {
       fontFamily: "DR-RAYMOND Display",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 24,
+      },
     },
 
     body1: {
       fontFamily: "Calibre Light",
       fontSize: 24,
       marginBottom: 20,
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 18,
+      },
     },
 
     h6: {
       fontFamily: "Calibre Light",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 14,
+      },
     },
     h5: {
       fontFamily: "Calibre Light",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 16,
+      },
     },
     h4: {
       fontFamily: "Calibre Light",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 18,
+      },
     },
     h3: {
       fontFamily: "DR-RAYMOND Display",
+      [theme.breakpoints.down("xs")]: {
+        fontSize: 22,
+      },
+    },
+    subtitle1: {
+      fontFamily: "Calibre Light",
+      fontSize: 12,
     },
   },
-
-  MuiInputOutlined: {
-    fullWidth: {
-      maxWidth: 500,
-    },
-  },
-
-  // MuiInputLabel: {
-  //   root: {},
-  // },
 };
+
+// MuiMenuItem: {
+//   gutters: {
+//     maxWidth: 200,
+//   },
+// },
 
 export default theme;

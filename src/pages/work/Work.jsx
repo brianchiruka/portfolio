@@ -9,26 +9,37 @@ const Work = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid container display="flex" style={{ marginBottom: 200 }}>
+      <Grid container display="flex" className={classes.sectionMargin}>
         <Grid item>
           <Dot style={{ position: "relative" }} />
           <Typography variant="h2" className={classes.work}>
             Selected Work
           </Typography>
         </Grid>
-        <Grid container spacing={6}>
-          <Grid item>
+        <Grid container>
+          <Grid item lg={6} md={6} sm={6} xs={12}>
             <Card
               title="woolies twin"
-              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, SendGrid API. 2021"
+              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, Firebase. Completed 2021"
               img={store}
+              code="https://github.com/brysonrare"
+              demo="https://shopforever.netlify.app/"
             />
           </Grid>
-          <Grid item style={{ marginTop: 100 }}>
+          <Grid
+            item
+            lg={6}
+            md={6}
+            sm={6}
+            xs={12}
+            className={classes.laggingCard}
+          >
             <Card
               title="e-commerce store"
-              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, SendGrid API. 2021"
+              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, Firebase. Completed 2021"
               img={store}
+              code="https://github.com/brysonrare"
+              demo="https://shopforever.netlify.app/"
             />
           </Grid>
         </Grid>

@@ -8,12 +8,12 @@ const Hero = () => {
 
   return (
     <>
-      <Grid container justifyContent="center" style={{ marginBottom: 200 }}>
+      <Grid container justifyContent="center" className={classes.sectionMargin}>
         <Grid item lg={9} sm={12} style={{ flexGrow: 3 }}>
           <Typography variant="h1">Hi, I'm Brian,</Typography>
           <br />
           <Typography variant="body1">
-            a <span className={classes.bold}>Junior Developer</span> in JHB, ZA.
+            a <b>Junior Developer</b> in JHB, ZA.
           </Typography>
           <br />
           <Typography variant="body1">
@@ -29,13 +29,7 @@ const Hero = () => {
           <br />
         </Grid>
         <Grid item lg={3} sm={12}>
-          <img
-            style={{
-              width: 300,
-              borderRadius: 9999,
-            }}
-            src={Photo}
-          />
+          <img className={classes.heroPotrait} src={Photo} />
         </Grid>
       </Grid>
     </>

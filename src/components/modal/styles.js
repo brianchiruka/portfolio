@@ -3,8 +3,10 @@ import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
   modal: {
     position: "relative",
-    bottom: 695,
-    right: 30,
+    height: 715,
+    width: 515,
+    bottom: 658,
+    right: 32,
     justifyContent: "center",
     alignItems: "center",
     opacity: 0,
@@ -13,31 +15,23 @@ export default makeStyles((theme) => ({
     },
   },
   modalCover: {
-    height: 650,
-    width: 450,
     borderRadius: 20,
-    paddingTop: 65,
-    paddingLeft: 30,
-    paddingRight: 30,
+    width: `100%`,
+    height: `100%`,
     background: "black",
+    opacity: 0.5,
     "&:hover": {
       opacity: 0.5,
     },
   },
-  live: {
-    color: "white",
+
+  cardButton: {
+    display: "flex",
     position: "absolute",
-    bottom: 390,
-    left: 180,
-    fontFamily: "Calibre",
-    fontSize: 28,
-  },
-  code: {
-    color: "white",
-    position: "absolute",
-    bottom: 300,
-    left: 180,
-    fontFamily: "Calibre",
-    fontSize: 28,
+    flexDirection: "column",
+    justifyContent: "spaceBetween",
+    padding: 5,
+    bottom: 325,
+    left: 194,
   },
 }));

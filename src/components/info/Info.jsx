@@ -7,7 +7,7 @@ const Info = ({ heading, title, description, dates, link }) => {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h3" style={{ marginBottom: 40 }}>
+      <Typography variant="h3" className={classes.infoSpacing}>
         {heading}
       </Typography>
       <Typography variant="h4">

@@ -1,31 +1,32 @@
-import { Button } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 
-const Modal = () => {
+const Modal = ({ demo, code }) => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.modal}>
+      <Box className={classes.modal}>
         <canvas className={classes.modalCover} />
-
-        <Button
-          variant="contained"
-          href="https://shopforever.netlify.app/"
-          target="_blank"
-          className={classes.live}
-        >
-          Live Demo
-        </Button>
-        <Button
-          variant="contained"
-          href="https://shopforever.netlify.app/"
-          target="_blank"
-          className={classes.code}
-        >
-          View code
-        </Button>
-      </div>
+        <Box className={classes.cardButton}>
+          <Button
+            variant="outlined"
+            style={{ color: "white" }}
+            href={demo}
+            target="_blank"
+          >
+            Live Demo
+          </Button>
+          <Button
+            variant="outlined"
+            style={{ color: "white" }}
+            href={code}
+            target="_blank"
+          >
+            View code
+          </Button>
+        </Box>
+      </Box>
     </>
   );
 };

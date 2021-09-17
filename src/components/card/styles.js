@@ -13,4 +13,24 @@ export default makeStyles((theme) => ({
   projectTitle: {
     fontFamily: "DR-RAYMOND Display",
   },
+
+  projectImage: {
+    width: 360,
+    marginLeft: 50,
+    position: "absolute",
+  },
+
+  [theme.breakpoints.down("xs")]: {
+    project: {
+      width: 250,
+      height: 380,
+      paddingTop: 30,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    projectImage: {
+      width: 200,
+      marginLeft: 30,
+    },
+  },
 }));

@@ -7,7 +7,7 @@ const About = () => {
   const classes = useStyles();
   return (
     <>
-      <Box style={{ marginBottom: 200 }}>
+      <Box className={classes.sectionMargin}>
         <Dot style={{ position: "relative" }} />
         <Typography variant="h2" className={classes.about}>
           About me
@@ -17,8 +17,10 @@ const About = () => {
         </Typography>
         <Typography variant="body1">
           My name is Brian Chiruka, and I am a Web developer and Visual Designer
-          based in JHB, ZA. My technical experience started with with me fiddling with breadboards and microprocessors to create logic circuits using C and Assembly. My professional background is an equal split between tech
-          and client experience on commercial services.
+          based in JHB, ZA. My technical experience started with with me
+          fiddling with breadboards and microprocessors to create logic circuits
+          using C and Assembly. My professional background is an equal split
+          between tech and client experience on commercial services.
         </Typography>
         <Typography variant="h4" className={classes.bold}>
           What do I do?

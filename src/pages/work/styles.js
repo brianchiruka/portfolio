@@ -7,4 +7,16 @@ export default makeStyles((theme) => ({
     bottom: 90,
     left: 40,
   },
+  sectionMargin: {
+    marginBottom: 200,
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 50,
+    },
+  },
+
+  [theme.breakpoints.up("sm")]: {
+    laggingCard: {
+      marginTop: 100,
+    },
+  },
 }));
