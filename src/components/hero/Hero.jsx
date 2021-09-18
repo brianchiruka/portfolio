@@ -13,7 +13,7 @@ const Hero = () => {
           <Typography variant="h1">Hi, I'm Brian,</Typography>
           <br />
           <Typography variant="body1">
-            a <b>Junior Developer</b> in JHB, ZA.
+            a <b>Junior Web Developer</b> in JHB, ZA.
           </Typography>
           <br />
           <Typography variant="body1">
@@ -29,7 +29,7 @@ const Hero = () => {
           <br />
         </Grid>
         <Grid item lg={3} sm={12}>
-          <img className={classes.heroPotrait} src={Photo} />
+          <img className={classes.heroPotrait} src={Photo} alt="" />
         </Grid>
       </Grid>
     </>

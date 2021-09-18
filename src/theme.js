@@ -1,6 +1,12 @@
 import { createTheme } from "@material-ui/core/styles";
 
 const theme = createTheme({
+  palette: {
+    secondary: {
+      main: "#000",
+    },
+  },
+
   bold: {
     fontFamily: "Calibre Medium",
     margin: 0,
@@ -11,12 +17,14 @@ const theme = createTheme({
 });
 
 theme.overrides = {
-  MuiButton: {
-    root: {
-      margin: 2,
-      fontFamily: "Calibre Light",
-    },
-  },
+  // MuiButton: {
+  //   root: {
+  //     fontFamily: "Calibre Light",
+  //   },
+  //   props: {
+  //     disableRipple: true,
+  //   },
+  // },
 
   MuiTypography: {
     h1: {

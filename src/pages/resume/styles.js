@@ -12,4 +12,12 @@ export default makeStyles((theme) => ({
       marginBottom: 50,
     },
   },
+  cvButton: {
+    padding: 20,
+    backgroundColor: "#ecede2",
+    [theme.breakpoints.down("xs")]: {
+      padding: 4,
+      backgroundColor: "#fff",
+    },
+  },
 }));

@@ -1,9 +1,7 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import useStyles from "./styles";
 
 const Skills = (props) => {
-  const classes = useStyles();
   return (
     <>
       <Typography variant="h3" gutterBottom>

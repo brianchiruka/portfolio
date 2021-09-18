@@ -1,7 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
-import { Box, Container, Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 const About = () => {
   const classes = useStyles();
@@ -16,11 +16,13 @@ const About = () => {
           Who am I?
         </Typography>
         <Typography variant="body1">
-          My name is Brian Chiruka, and I am a Web developer and Visual Designer
-          based in JHB, ZA. My technical experience started with with me
-          fiddling with breadboards and microprocessors to create logic circuits
-          using C and Assembly. My professional background is an equal split
-          between tech and client experience on commercial services.
+          My name is Brian Chiruka, and I am a junior Web developer and Visual
+          Designer based in JHB, ZA. My technical experience started with me
+          using breadboards and microprocessors to do things like control LEDs
+          and sensors. This introduced me to writing code in C and Assembly and
+          eventually studying Electrical Engineering at CUT. After university I
+          then went on to get professional experience as a technician and roles
+          that focused on client experience for commercial services
         </Typography>
         <Typography variant="h4" className={classes.bold}>
           What do I do?
@@ -28,9 +30,9 @@ const About = () => {
         <Typography variant="body1">
           I combine research, user flows, wireframing, prototyping,
           storytelling, and visual design & development to transform tricky
-          problems into engaging solutions. With a background in Front-End
-          Development, I understand the constraints of the web and am able to
-          design and build around them effectively.
+          problems into engaging solutions. With a background in computing
+          achitecture, I understand the constraints of the web and am able to
+          build around them effectively.
         </Typography>
         <Typography variant="h4" className={classes.bold}>
           What am I passionate about?
@@ -40,17 +42,11 @@ const About = () => {
           empower more people to create ✨beautiful experiences✨
         </Typography>
         <Typography variant="body1">
-          Because of this, I am always on the lookout for No-Code solutions that
-          help everyone work faster and place the focus on the design,
-          accessibility, and execution of products. I am also extremely
-          passionate about bridging the gap between designers & developers in
-          order to create the best possible products.
-        </Typography>
-        <Typography variant="body1">
           But most importantly, I love working with diverse people who want to
-          make the 🌎 a little better before we’re all DEAD 💀 Okay, what else?
-          I ❤️ dogs. That’s it.
+          make the 🌎 a little better.
         </Typography>
+        <Typography variant="body1">Okay, what else?</Typography>
+        <Typography variant="body1">I ❤️ dogs. That’s it.</Typography>
       </Box>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -40 };
@@ -13,7 +13,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.1 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <Link to="/work">Work</Link>
+        <a href="/work">Work</a>
       </motion.li>
       <motion.li
         initial={animateFrom}

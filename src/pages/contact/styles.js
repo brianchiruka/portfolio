@@ -18,12 +18,6 @@ export default makeStyles((theme) => ({
       marginBottom: 50,
     },
   },
-  contactInvite: {
-    marginBottom: 80,
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: 0,
-    },
-  },
   pointer: {
     width: 50,
     height: 30,

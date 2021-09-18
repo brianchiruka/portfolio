@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     position: "relative",
     height: 715,
     width: 515,
-    bottom: 658,
+    bottom: 140,
     right: 32,
     justifyContent: "center",
     alignItems: "center",

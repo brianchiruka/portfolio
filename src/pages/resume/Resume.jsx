@@ -7,8 +7,6 @@ import Skills from "../../components/skills/Skills";
 
 const Resume = () => {
   const classes = useStyles();
-  const animateFrom = { opacity: 0, y: -40 };
-  const animateTo = { opacity: 1, y: 0 };
 
   return (
     <>
@@ -23,6 +21,11 @@ const Resume = () => {
           <Grid item lg={6} md={6} sm={6} xs={6} styles={{ flexGrow: 2 }}>
             <Info
               heading="Work experience"
+              title="Freelancer"
+              description="Web developer"
+              dates="2020 - Current"
+            />
+            <Info
               title="LifeCheq"
               link="https://lifecheq.co.za"
               description="Client experience consultant"
@@ -65,9 +68,15 @@ const Resume = () => {
             <Info
               heading="Online Courses"
               title="Udemy"
-              link="https://www.cut.ac.za"
-              description="Electrical Engineering"
-              dates="2014 - 2016"
+              link="https://udemy.com"
+              description="HTML, CSS & JavaScript The Complete Developer's Guide"
+              dates="2019 - 2019"
+            />
+            <Info
+              title="Masterclass"
+              link="https://udemy.com"
+              description="Justin Chen Design Masterclass"
+              dates="2020 - 2020"
             />
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={6}>
@@ -94,7 +103,9 @@ const Resume = () => {
           </Grid>
         </Grid>
         <Grid item gutterBottom>
-          <Button variant="outlined">Download Résumé</Button>
+          <Button variant="outlined" className={classes.cvButton}>
+            <b>Download Résumé</b>
+          </Button>
         </Grid>
       </Grid>
     </>

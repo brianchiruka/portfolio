@@ -2,7 +2,6 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import { Container, ThemeProvider } from "@material-ui/core";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Work from "./pages/work/Work";
 import Resume from "./pages/resume/Resume";
 import About from "./pages/about/About";
@@ -13,19 +12,15 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Container maxWidth="lg" style={{ overflow: "hidden" }}>
-          <Navbar />
-          {/* <Route exact path="home"> */}
-          <Hero />
-          {/* </Route> */}
-          <Work />
-          <Resume />
-          <About />
-          <Contact />
-          <Footer />
-        </Container>
-      </Router>
+      <Container maxWidth="lg" style={{ overflow: "hidden" }}>
+        <Navbar />
+        <Hero />
+        <Work id="work" />
+        <Resume />
+        <About />
+        <Contact />
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }

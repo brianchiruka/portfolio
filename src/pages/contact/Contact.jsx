@@ -4,6 +4,7 @@ import potrait1 from "../../images/potrait1.jpg";
 import { ReactComponent as Dot } from "./dot.svg";
 import arrow from "./pointer.gif";
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import { ContactForm } from "../../components/contactForm/ContactForm";
 const Contact = () => {
   const classes = useStyles();
   return (
@@ -16,14 +17,14 @@ const Contact = () => {
           </Typography>
         </Grid>
         <Grid container>
-          <Grid item className={classes.contactInvite}>
+          <Grid item>
             <Typography variant="h4">
               <b>Want to work together? Or just want to say hi?</b>
             </Typography>
             <Typography variant="h4">
               <b>Drop me a line right here.</b>
             </Typography>
-            <img src={arrow} className={classes.pointer} />
+            <img src={arrow} alt="" className={classes.pointer} />
           </Grid>
           <Grid container spacing={10}>
             <Grid item lg={4} md={4} sm={4}>
@@ -31,9 +32,13 @@ const Contact = () => {
                 src={potrait1}
                 style={{ width: 300, borderRadius: 999 }}
                 className={classes.portrait2}
+                alt=""
               />
             </Grid>
-            <Grid item lg={8} md={8} sm={12} xs={12}>
+            <Grid item lg={8} md={8} sm={12} xs={12} >
+              <ContactForm />
+            </Grid>
+            {/* <Grid item lg={8} md={8} sm={12} xs={12}>
               <Grid item>
                 <Typography>
                   <TextField
@@ -80,7 +85,7 @@ const Contact = () => {
               <Button variant="contained" fullWidth>
                 Send Message
               </Button>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Grid>

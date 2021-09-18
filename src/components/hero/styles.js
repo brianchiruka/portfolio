@@ -18,6 +18,7 @@ export default makeStyles((theme) => ({
     marginBottom: 200,
     [theme.breakpoints.down("xs")]: {
       marginBottom: 50,
+      marginTop: 0,
     },
   },
 }));
