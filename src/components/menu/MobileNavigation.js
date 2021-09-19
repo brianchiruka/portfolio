@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { ReactComponent as Logo } from "./logo.svg";
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
@@ -23,10 +24,12 @@ const MobileNavigation = () => {
     <>
       <Grid item>
         <motion.span initial={animateFrom} animate={animateTo}>
-          <Typography variant="h6" className={classes.MobileLogo}>
-            <Logo />
-            brianchiruka
-          </Typography>
+          <Link smooth to="#home" onClick={() => setOpen(false)}>
+            <Typography variant="h6" className={classes.MobileLogo}>
+              <Logo />
+              brianchiruka
+            </Typography>
+          </Link>
         </motion.span>
       </Grid>
       <CloseIcon

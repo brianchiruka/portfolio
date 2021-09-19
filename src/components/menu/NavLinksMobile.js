@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -40 };
@@ -12,7 +14,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.05 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/">Work 💻</a>
+        <Link smooth to="#work">Work 💻</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -20,7 +22,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.1 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/">Résumé 📄</a>
+        <Link smooth to="#resume">Résumé 📄</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -28,7 +30,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.2 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/">About Me 🦸‍♂️</a>
+        <Link smooth to="#about">About Me 🦸‍♂️</Link>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -36,7 +38,7 @@ const NavLinks = (props) => {
         transition={{ delay: 0.3 }}
         onClick={() => props.isMobile && props.closeMobileMenu()}
       >
-        <a href="/">Contact 👋</a>
+        <Link smooth to="#contact">Contact 👋</Link>
       </motion.li>
     </ul>
   );

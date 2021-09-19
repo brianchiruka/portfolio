@@ -1,5 +1,28 @@
 import { useState } from "react";
 
+// Import the functions you need from the SDKs you need
+// import firebase from "firebase";
+
+// Firebase configuration
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCKw3K7bFglAHaNk1kdhdc97UPLGuiF_Rk",
+//   authDomain: "portofoliocontactform.firebaseapp.com",
+//   databaseURL: "https://portofoliocontactform-default-rtdb.firebaseio.com",
+//   projectId: "portofoliocontactform",
+//   storageBucket: "portofoliocontactform.appspot.com",
+//   messagingSenderId: "252593169862",
+//   appId: "1:252593169862:web:2cce2d74fea5ba85cabec7",
+// };
+
+// Initialize Firebase
+
+// firebase.initializeApp(config);
+
+// Reference messages collection
+
+// var messagesRef = firebase.database().ref("messages");
+
 const PostContactForm = async (values, successCallback, errorCallback) => {
   // do stuff
   // if successful
@@ -14,6 +37,17 @@ const initialFormValues = {
   formSubmitted: false,
   success: false,
 };
+
+// Save the message to firebase
+
+// function saveMessage(fullName, email, message) {
+//   var newMessageRef = messagesRef.push();
+//   newMessageRef.set({
+//     fullName: fullName,
+//     email: email,
+//     message: message,
+//   });
+// }
 
 export const useFormControls = () => {
   const [values, setValues] = useState(initialFormValues);
@@ -57,6 +91,8 @@ export const useFormControls = () => {
       formSubmitted: true,
       success: true,
     });
+    // Save message
+    // saveMessage(fullName, email, message);
   };
 
   const handleError = () => {

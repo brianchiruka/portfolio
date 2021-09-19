@@ -4,14 +4,16 @@ import { ReactComponent as Dot } from "./dot.svg";
 import { Card } from "../../components/card/Card";
 import { Grid, Typography } from "@material-ui/core";
 import store from "../../images/store.png";
+import woolies from "../../images/woolies.png";
 
 const Work = () => {
   const classes = useStyles();
+
   return (
     <>
       <Grid container display="flex" className={classes.sectionMargin}>
         <Grid item>
-          <Dot style={{ position: "relative" }} />
+          <Dot style={{ position: "relative" }} id="work" />
           <Typography variant="h2" className={classes.work}>
             Selected Work
           </Typography>
@@ -19,9 +21,9 @@ const Work = () => {
         <Grid container>
           <Grid item lg={6} md={6} sm={6} xs={12}>
             <Card
-              title="woolies twin"
-              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, Firebase. Completed 2021"
-              img={store}
+              title="woolies clone"
+              subtitle="Used: React, MaterialUI. Completed 2021"
+              img={woolies}
               code="https://github.com/brysonrare"
               demo="https://shopforever.netlify.app/"
             />

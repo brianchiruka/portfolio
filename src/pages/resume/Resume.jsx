@@ -12,7 +12,7 @@ const Resume = () => {
     <>
       <Grid container className={classes.sectionMargin}>
         <Grid item>
-          <Dot style={{ position: "relative" }} />
+          <Dot style={{ position: "relative" }} id="resume" />
           <Typography variant="h2" className={classes.resume}>
             Résumé
           </Typography>

@@ -10,7 +10,9 @@ const Hero = () => {
     <>
       <Grid container justifyContent="center" className={classes.sectionMargin}>
         <Grid item lg={9} sm={12} style={{ flexGrow: 3 }}>
-          <Typography variant="h1">Hi, I'm Brian,</Typography>
+          <Typography variant="h1">
+            Hi, I'm Brian,
+          </Typography>
           <br />
           <Typography variant="body1">
             a <b>Junior Web Developer</b> in JHB, ZA.

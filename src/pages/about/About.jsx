@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <Box className={classes.sectionMargin}>
-        <Dot style={{ position: "relative" }} />
+        <Dot style={{ position: "relative" }} id="about" />
         <Typography variant="h2" className={classes.about}>
           About me
         </Typography>

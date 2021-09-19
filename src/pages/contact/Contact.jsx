@@ -11,7 +11,7 @@ const Contact = () => {
     <>
       <Grid container className={classes.sectionMargin}>
         <Grid item>
-          <Dot style={{ position: "relative" }} />
+          <Dot style={{ position: "relative" }} id="contact" />
           <Typography variant="h2" className={classes.contact}>
             Contact me
           </Typography>
@@ -35,7 +35,7 @@ const Contact = () => {
                 alt=""
               />
             </Grid>
-            <Grid item lg={8} md={8} sm={12} xs={12} >
+            <Grid item lg={8} md={8} sm={12} xs={12}>
               <ContactForm />
             </Grid>
             {/* <Grid item lg={8} md={8} sm={12} xs={12}>
