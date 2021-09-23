@@ -104,7 +104,15 @@ const Resume = () => {
           </Grid>
         </Grid>
         <Grid item>
-          <Button variant="outlined" className={classes.cvButton}>
+          <Button
+            variant="outlined"
+            className={classes.cvButton}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1wuaVHteaEsilOFDmdWzl5tOyjsDCCBwb/view?usp=sharing"
+              )
+            }
+          >
             <b>Download Résumé</b>
           </Button>
         </Grid>
