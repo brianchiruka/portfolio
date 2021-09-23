@@ -1,4 +1,4 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box, Button, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 import Modal from "../modal/Modal";
@@ -28,7 +28,32 @@ export const Card = ({ title, subtitle, img, demo, code }) => {
           className={classes.projectImage}
         />
         <Modal demo={demo} code={code} />
+        <Grid container className={classes.mobileCardButtons}>
+          <Grid item>
+            <Button size="small" variant="outlined">
+              <a
+                href={code}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "black" }}
+              >
+                View Code
+              </a>
+            </Button>
+            <Button size="small" variant="outlined">
+              <a
+                href={code}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "black" }}
+              >
+                Live Demo
+              </a>
+            </Button>
+          </Grid>
+        </Grid>
       </Box>
+      <br />
     </>
   );
 };

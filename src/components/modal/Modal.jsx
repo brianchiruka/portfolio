@@ -11,7 +11,7 @@ const Modal = ({ demo, code }) => {
         <Box className={classes.cardButton}>
           <Button
             variant="outlined"
-            style={{ color: "white" }}
+            style={{ color: "white", marginBottom: 10 }}
             href={demo}
             target="_blank"
           >

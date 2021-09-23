@@ -13,10 +13,7 @@ const Navigation = () => {
           <b>brianchiruka</b>
         </Typography>
       </Grid>
-      <NavLinks
-        style={{ position: "relative" }}
-  
-      />
+      <NavLinks style={{ position: "relative" }} />
     </nav>
   );
 };

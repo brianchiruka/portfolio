@@ -10,6 +10,11 @@ export default makeStyles((theme) => ({
     paddingLeft: 30,
     paddingRight: 30,
   },
+
+  mobileCardButtons: {
+    display: "none",
+  },
+
   projectTitle: {
     fontFamily: "DR-RAYMOND Display",
   },
@@ -20,7 +25,7 @@ export default makeStyles((theme) => ({
     position: "absolute",
   },
 
-  [theme.breakpoints.down("xs")]: {
+  [theme.breakpoints.only("xs")]: {
     project: {
       width: 250,
       height: 380,
@@ -31,6 +36,30 @@ export default makeStyles((theme) => ({
     projectImage: {
       width: 200,
       marginLeft: 30,
+    },
+
+    mobileCardButtons: {
+      display: "flex",
+      position: "absolute",
+      MozTransform: "rotate(0.75turn)",
+      WebkitTransform: "rotate(0.75turn)",
+      OTransform: "rotate(0.75turn)",
+      MsTransform: "rotate(0.75turn)",
+      bottom: 230,
+      left: 170,
+    },
+  },
+
+  [theme.breakpoints.between("sm", "md")]: {
+    mobileCardButtons: {
+      display: "flex",
+      position: "absolute",
+      MozTransform: "rotate(0.75turn)",
+      WebkitTransform: "rotate(0.75turn)",
+      OTransform: "rotate(0.75turn)",
+      MsTransform: "rotate(0.75turn)",
+      bottom: 510,
+      left: 300,
     },
   },
 }));

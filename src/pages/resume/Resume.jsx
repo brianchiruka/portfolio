@@ -21,6 +21,7 @@ const Resume = () => {
           <Grid item lg={6} md={6} sm={6} xs={6} styles={{ flexGrow: 2 }}>
             <Info
               heading="Work experience"
+              link="https://brianchiruka.com"
               title="Freelancer"
               description="Web developer"
               dates="2020 - Current"
@@ -102,7 +103,7 @@ const Resume = () => {
             />
           </Grid>
         </Grid>
-        <Grid item gutterBottom>
+        <Grid item>
           <Button variant="outlined" className={classes.cvButton}>
             <b>Download Résumé</b>
           </Button>

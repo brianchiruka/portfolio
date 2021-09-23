@@ -19,12 +19,12 @@ const Work = () => {
           </Typography>
         </Grid>
         <Grid container>
-          <Grid item lg={6} md={6} sm={6} xs={12}>
+          <Grid item lg={6} md={6} sm={12} xs={12}>
             <Card
-              title="woolies clone"
-              subtitle="Used: React, MaterialUI. Completed 2021"
-              img={woolies}
-              code="https://github.com/brysonrare"
+              title="e-commerce store"
+              subtitle="Used: ReactJS, MaterialUI, CommerceJS, Stripe API."
+              img={store}
+              code="https://github.com/brysonrare/shopforever"
               demo="https://shopforever.netlify.app/"
             />
           </Grid>
@@ -32,16 +32,16 @@ const Work = () => {
             item
             lg={6}
             md={6}
-            sm={6}
+            sm={12}
             xs={12}
             className={classes.laggingCard}
           >
             <Card
-              title="e-commerce store"
-              subtitle="Used: React, MaterialUI, CommerceJS, Stripe API, Firebase. Completed 2021"
-              img={store}
-              code="https://github.com/brysonrare"
-              demo="https://shopforever.netlify.app/"
+              title="portfolio website"
+              subtitle="Used: ReactJS, MaterialUI, Firebase."
+              img={woolies}
+              code="https://github.com/brysonrare/portfolio"
+              demo="/"
             />
           </Grid>
         </Grid>

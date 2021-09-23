@@ -11,7 +11,12 @@ const Info = ({ heading, title, description, dates, link }) => {
         {heading}
       </Typography>
       <Typography variant="h4">
-        <a href={link} target="_blank" className={classes.link}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className={classes.link}
+        >
           {title}
           <Icon className={classes.emoji} />
         </a>

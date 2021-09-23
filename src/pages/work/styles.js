@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     left: 40,
   },
   sectionMargin: {
-    marginBottom: 200,
+    marginBottom: 150,
     [theme.breakpoints.down("xs")]: {
       marginBottom: 50,
     },

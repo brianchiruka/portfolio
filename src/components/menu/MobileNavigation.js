@@ -1,8 +1,8 @@
 import React from "react";
 import NavLinksMobile from "./NavLinksMobile";
 import classes from "./Navbar.module.css";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
+import MenuOutlinedIcon from "@material-ui/icons/Menu";
+import CloseRoundedIcon from "@material-ui/icons/Close";
 import { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { ReactComponent as Logo } from "./logo.svg";
@@ -14,7 +14,7 @@ const MobileNavigation = () => {
   const animateFrom = { opacity: 0, scale: 0 };
   const animateTo = { opacity: 1, scale: 1 };
   const hamburgerIcon = (
-    <MenuIcon
+    <MenuOutlinedIcon
       className={classes.Hamburger}
       color="inherit"
       onClick={() => setOpen(!open)}
@@ -27,12 +27,12 @@ const MobileNavigation = () => {
           <Link smooth to="#home" onClick={() => setOpen(false)}>
             <Typography variant="h6" className={classes.MobileLogo}>
               <Logo />
-              brianchiruka
+              brianchiruka.com
             </Typography>
           </Link>
         </motion.span>
       </Grid>
-      <CloseIcon
+      <CloseRoundedIcon
         className={classes.Hamburger}
         color="black"
         onClick={() => setOpen(!open)}

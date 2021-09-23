@@ -12,12 +12,16 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       width: 150,
     },
+
+    // [theme.breakpoints.between("md")]: {
+    //   marginLeft: 150,
+    // },
   },
   sectionMargin: {
     marginTop: 45,
     marginBottom: 200,
     [theme.breakpoints.down("xs")]: {
-      marginBottom: 50,
+      marginBottom: 100,
       marginTop: 0,
     },
   },

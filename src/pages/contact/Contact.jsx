@@ -3,7 +3,7 @@ import useStyles from "./styles";
 import potrait1 from "../../images/potrait1.jpg";
 import { ReactComponent as Dot } from "./dot.svg";
 import arrow from "./pointer.gif";
-import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 const Contact = () => {
   const classes = useStyles();
@@ -26,7 +26,7 @@ const Contact = () => {
             </Typography>
             <img src={arrow} alt="" className={classes.pointer} />
           </Grid>
-          <Grid container spacing={10}>
+          <Grid container spacing={1}>
             <Grid item lg={4} md={4} sm={4}>
               <img
                 src={potrait1}

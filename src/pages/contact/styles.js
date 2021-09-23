@@ -12,6 +12,7 @@ export default makeStyles((theme) => ({
       display: "none",
     },
   },
+
   sectionMargin: {
     marginBottom: 200,
     [theme.breakpoints.down("xs")]: {
@@ -19,17 +20,14 @@ export default makeStyles((theme) => ({
     },
   },
   pointer: {
-    width: 50,
-    height: 30,
+    width: 25,
     bottom: 10,
     left: 190,
-    rotate: `15deg`,
     position: "relative",
     [theme.breakpoints.up("sm")]: {
-      width: 110,
-      height: 65,
-      bottom: 20,
-      left: 390,
+      width: 50,
+      bottom: 30,
+      left: 400,
     },
   },
 }));

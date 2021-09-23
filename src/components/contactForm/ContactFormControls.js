@@ -1,34 +1,11 @@
 import { useState } from "react";
+require("dotenv").config();
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(
+  "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"
+);
 
-// Import the functions you need from the SDKs you need
-// import firebase from "firebase";
-
-// Firebase configuration
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCKw3K7bFglAHaNk1kdhdc97UPLGuiF_Rk",
-//   authDomain: "portofoliocontactform.firebaseapp.com",
-//   databaseURL: "https://portofoliocontactform-default-rtdb.firebaseio.com",
-//   projectId: "portofoliocontactform",
-//   storageBucket: "portofoliocontactform.appspot.com",
-//   messagingSenderId: "252593169862",
-//   appId: "1:252593169862:web:2cce2d74fea5ba85cabec7",
-// };
-
-// Initialize Firebase
-
-// firebase.initializeApp(config);
-
-// Reference messages collection
-
-// var messagesRef = firebase.database().ref("messages");
-
-const PostContactForm = async (values, successCallback, errorCallback) => {
-  // do stuff
-  // if successful
-  if (true) successCallback(console.log(values));
-  else errorCallback();
-};
+// console.log(process.env.SENDGRID_API_KEY);
 
 const initialFormValues = {
   fullName: "",
@@ -38,17 +15,7 @@ const initialFormValues = {
   success: false,
 };
 
-// Save the message to firebase
-
-// function saveMessage(fullName, email, message) {
-//   var newMessageRef = messagesRef.push();
-//   newMessageRef.set({
-//     fullName: fullName,
-//     email: email,
-//     message: message,
-//   });
-// }
-
+// form validation custom hook
 export const useFormControls = () => {
   const [values, setValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
@@ -91,8 +58,6 @@ export const useFormControls = () => {
       formSubmitted: true,
       success: true,
     });
-    // Save message
-    // saveMessage(fullName, email, message);
   };
 
   const handleError = () => {
@@ -118,9 +83,43 @@ export const useFormControls = () => {
     const isValid =
       Object.values(errors).every((x) => x === "") && formIsValid();
     if (isValid) {
-      await PostContactForm(values, handleSuccess, handleError);
+      await PostContactForm(msg, handleSuccess, handleError);
     }
   };
+
+  const msg = {
+    to: "politechiruka@gmail.com", // Change to your recipient
+    from: "attomg@gmail.com",
+    subject: "Portfolio form notification",
+    text: values.fullName + " " + values.email + " " + values.message,
+    html: "<strong>'{values.message}</strong>",
+  };
+
+  console.log(msg);
+
+  const PostContactForm = async (msg, successCallback, errorCallback) => {
+    // do stuff
+    // if successful
+    sgMail
+      .send(msg)
+      .then((response) => {
+        console.log(response[0].statusCode);
+        console.log(response[0].headers);
+        handleSuccess();
+      })
+      .catch((error) => {
+        console.error(error);
+        handleError();
+      });
+  };
+
+  // const msg = {
+  //   to: "politechiruka@gmail.com", // Change to your recipient
+  //   from: "attomg@gmail.com",
+  //   subject: "Sending with SendGrid is Fun",
+  //   text: "and easy to do anywhere, even with Node.js",
+  //   html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+  // };
 
   return {
     values,
