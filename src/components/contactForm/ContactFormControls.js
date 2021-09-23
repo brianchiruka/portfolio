@@ -1,9 +1,7 @@
 import { useState } from "react";
 require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // console.log(process.env.SENDGRID_API_KEY);
 
