@@ -1,22 +1,29 @@
 import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
-import { Button, Grid, Typography } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import Info from "../../components/info/Info";
 import Skills from "../../components/skills/Skills";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 const Resume = () => {
   const classes = useStyles();
+  const skillsArray = [
+    "Adobe XD",
+    "Sketch",
+    "Firebase",
+    "MaterialUI",
+    "HTML, CSS & Vanilla JS",
+    "React, Bootstrap & Redux",
+    "GIT",
+  ];
 
   return (
     <>
       <Grid container className={classes.sectionMargin}>
-        <Grid item>
+        <SectionTitle title={"Résumé"}>
           <Dot style={{ position: "relative" }} id="resume" />
-          <Typography variant="h2" className={classes.resume}>
-            Résumé
-          </Typography>
-        </Grid>
+        </SectionTitle>
         <Grid container spacing={3}>
           <Grid item lg={6} md={6} sm={6} xs={6} styles={{ flexGrow: 2 }}>
             <Info
@@ -56,7 +63,7 @@ const Resume = () => {
               heading="Education"
               title="Milpark"
               link="https://www.milpark.ac.za"
-              description="School of business"
+              description="Class of business"
               dates="2020 - 2021"
             />
             <Info
@@ -70,13 +77,13 @@ const Resume = () => {
               heading="Online Courses"
               title="Udemy"
               link="https://udemy.com"
-              description="HTML, CSS & JavaScript The Complete Developer's Guide"
+              description="React JS Frontend Web Development"
               dates="2019 - 2019"
             />
             <Info
-              title="Masterclass"
+              title="Udemy"
               link="https://udemy.com"
-              description="Justin Chen Design Masterclass"
+              description="Coding with Etherium & Solidity"
               dates="2020 - 2020"
             />
           </Grid>
@@ -91,16 +98,7 @@ const Resume = () => {
             />
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={6}>
-            <Skills
-              title="Tools"
-              text1="Adobe XD"
-              text2="Sketch"
-              text3="Firebase"
-              text4="MaterialUI"
-              text5="HTML, CSS & Vanilla JS"
-              text6="React, Bootstrap & Redux"
-              text7="GIT"
-            />
+            <Skills title="Tools" skillsArray={skillsArray} />
           </Grid>
         </Grid>
         <Grid item>

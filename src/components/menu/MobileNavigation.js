@@ -13,6 +13,7 @@ const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
   const animateFrom = { opacity: 0, scale: 0 };
   const animateTo = { opacity: 1, scale: 1 };
+
   const hamburgerIcon = (
     <MenuOutlinedIcon
       className={classes.Hamburger}
@@ -25,7 +26,7 @@ const MobileNavigation = () => {
       <Grid item>
         <motion.span initial={animateFrom} animate={animateTo}>
           <Link smooth to="#home" onClick={() => setOpen(false)}>
-            <Typography variant="h6" className={classes.MobileLogo}>
+            <Typography variant="h4" className={classes.MobileLogo}>
               <Logo />
               brianchiruka.com
             </Typography>

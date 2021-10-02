@@ -1,23 +1,9 @@
 import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
-import { useState } from "react";
-import SideLinks from "./SideLinks";
 
 const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
-
-  const [sideNav, setSideNav] = useState(false);
-
-  function sideNavigation() {
-    if (window.scrollY >= 500) {
-      setSideNav(true);
-    } else {
-      setSideNav(false);
-    }
-  }
-
-  window.addEventListener("scroll", sideNavigation);
 
   return (
     <>
@@ -63,7 +49,6 @@ const NavLinks = (props) => {
           </Link>
         </motion.li>
       </ul>
-      {sideNav && <SideLinks />}
     </>
   );
 };

@@ -8,14 +8,10 @@ export default makeStyles((theme) => ({
   },
   heroPotrait: {
     width: 300,
-    borderRadius: 9999,
+    borderRadius: 999,
     [theme.breakpoints.down("xs")]: {
       width: 150,
     },
-
-    // [theme.breakpoints.between("md")]: {
-    //   marginLeft: 150,
-    // },
   },
   sectionMargin: {
     marginTop: 45,

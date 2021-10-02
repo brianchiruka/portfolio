@@ -2,16 +2,16 @@ import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
 import { Box, Typography } from "@material-ui/core";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 const About = () => {
   const classes = useStyles();
   return (
     <>
       <Box className={classes.sectionMargin}>
-        <Dot style={{ position: "relative" }} id="about" />
-        <Typography variant="h2" className={classes.about}>
-          About me
-        </Typography>
+        <SectionTitle title={"About"}>
+          <Dot style={{ position: "relative" }} id="about" />
+        </SectionTitle>
         <Typography variant="h4" className={classes.bold}>
           Who am I?
         </Typography>

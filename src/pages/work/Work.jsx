@@ -2,9 +2,10 @@ import React from "react";
 import useStyles from "./styles";
 import { ReactComponent as Dot } from "./dot.svg";
 import { Card } from "../../components/card/Card";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import store from "../../images/store.png";
 import woolies from "../../images/woolies.png";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 const Work = () => {
   const classes = useStyles();
@@ -12,12 +13,9 @@ const Work = () => {
   return (
     <>
       <Grid container display="flex" className={classes.sectionMargin}>
-        <Grid item>
+        <SectionTitle title={"Selected Work"}>
           <Dot style={{ position: "relative" }} id="work" />
-          <Typography variant="h2" className={classes.work}>
-            Selected Work
-          </Typography>
-        </Grid>
+        </SectionTitle>
         <Grid container>
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <Card

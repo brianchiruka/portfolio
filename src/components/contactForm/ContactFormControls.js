@@ -3,8 +3,6 @@ require("dotenv").config();
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// console.log(process.env.SENDGRID_API_KEY);
-
 const initialFormValues = {
   fullName: "",
   email: "",
@@ -93,7 +91,7 @@ export const useFormControls = () => {
     html: "<strong>'{values.message}</strong>",
   };
 
-  console.log(msg);
+  // console.log(msg);
 
   const PostContactForm = async (msg, successCallback, errorCallback) => {
     // do stuff

@@ -5,16 +5,17 @@ import { ReactComponent as Dot } from "./dot.svg";
 import arrow from "./pointer.gif";
 import { Grid, Typography } from "@material-ui/core";
 import { ContactForm } from "../../components/contactForm/ContactForm";
+import SectionTitle from "../../components/sectionTitle/SectionTitle";
+
 const Contact = () => {
   const classes = useStyles();
   return (
     <>
       <Grid container className={classes.sectionMargin}>
         <Grid item>
-          <Dot style={{ position: "relative" }} id="contact" />
-          <Typography variant="h2" className={classes.contact}>
-            Contact me
-          </Typography>
+          <SectionTitle title={"Contact"}>
+            <Dot style={{ position: "relative" }} id="contact" />
+          </SectionTitle>
         </Grid>
         <Grid container>
           <Grid item>

@@ -17,15 +17,6 @@ const theme = createTheme({
 });
 
 theme.overrides = {
-  // MuiButton: {
-  //   root: {
-  //     fontFamily: "Calibre Light",
-  //   },
-  //   props: {
-  //     disableRipple: true,
-  //   },
-  // },
-
   MuiTypography: {
     h1: {
       fontFamily: "DR-RAYMOND Display",
@@ -79,11 +70,5 @@ theme.overrides = {
     },
   },
 };
-
-// MuiMenuItem: {
-//   gutters: {
-//     maxWidth: 200,
-//   },
-// },
 
 export default theme;
