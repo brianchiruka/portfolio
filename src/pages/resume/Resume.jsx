@@ -8,16 +8,7 @@ import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 const Resume = () => {
   const classes = useStyles();
-  const skillsArray = [
-    "Adobe XD",
-    "Sketch",
-    "Firebase",
-    "MaterialUI",
-    "HTML, CSS & Vanilla JS",
-    "React, Bootstrap & Redux",
-    "GIT",
-  ];
-
+  
   return (
     <>
       <Grid container className={classes.sectionMargin}>
@@ -92,13 +83,22 @@ const Resume = () => {
               title="Skills"
               text1="Product Design"
               text2="UI/UX Design"
-              text3="Sales & Client Experience"
+              text3="Client Experience & Sales"
               text4="Web Development"
               text5="Learning on the go!"
             />
           </Grid>
           <Grid item lg={6} md={6} sm={6} xs={6}>
-            <Skills title="Tools" skillsArray={skillsArray} />
+            <Skills
+              title="Tools"
+              text1="Adobe XD"
+              text2="Sketch"
+              text3="Firebase"
+              text4="MaterialUI"
+              text5="HTML, CSS & Vanilla JS"
+              text6="React, Bootstrap & Redux"
+              text7="GIT"
+            />
           </Grid>
         </Grid>
         <Grid item>
