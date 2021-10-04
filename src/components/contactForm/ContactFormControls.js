@@ -1,7 +1,7 @@
 import { useState } from "react";
-require("dotenv").config();
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// require("dotenv").config();
+// const sgMail = require("@sendgrid/mail");
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const initialFormValues = {
   fullName: "",
@@ -84,38 +84,41 @@ export const useFormControls = () => {
   };
 
   const msg = {
-    to: "politechiruka@gmail.com", // Change to your recipient
-    from: "attomg@gmail.com",
-    subject: "Portfolio form notification",
-    text: values.fullName + " " + values.email + " " + values.message,
-    html: "<strong>'{values.message}</strong>",
+    subject: "Portfolio Notification",
+    name: values.fullName,
+    email: values.email,
+    message: values.message,
   };
-
-  // console.log(msg);
 
   const PostContactForm = async (msg, successCallback, errorCallback) => {
     // do stuff
     // if successful
-    sgMail
-      .send(msg)
-      .then((response) => {
-        console.log(response[0].statusCode);
-        console.log(response[0].headers);
-        handleSuccess();
+
+    fetch("/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "text",
+      },
+      body: JSON.stringify(
+        msg
+        // msg.name,
+        // msg.email,
+        // msg.subject,
+        // msg.message,
+      ),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message);
+        // setMessage("");
+        // setName("");
+        // setSubject("");
+        // setEmail("");
       })
-      .catch((error) => {
-        console.error(error);
-        handleError();
+      .catch((err) => {
+        console.log(err);
       });
   };
-
-  // const msg = {
-  //   to: "politechiruka@gmail.com", // Change to your recipient
-  //   from: "attomg@gmail.com",
-  //   subject: "Sending with SendGrid is Fun",
-  //   text: "and easy to do anywhere, even with Node.js",
-  //   html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  // };
 
   return {
     values,

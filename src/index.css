@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "DR-RAYMOND Display";
+  src: local("DR-RAYMOND Display"),
+    url(./fonts/dr-raymond-display.ttf) format("truetype");
+  src: local("Calibre Medium"),
+    url(./fonts/CalibreMedium.otf) format("opentype");
+  src: local("Calibre Light"), url(./fonts/CalibreLight.otf) format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;

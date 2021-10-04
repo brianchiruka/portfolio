@@ -8,7 +8,7 @@ import SectionTitle from "../../components/sectionTitle/SectionTitle";
 
 const Resume = () => {
   const classes = useStyles();
-  
+
   return (
     <>
       <Grid container className={classes.sectionMargin}>
@@ -107,7 +107,7 @@ const Resume = () => {
             className={classes.cvButton}
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1wuaVHteaEsilOFDmdWzl5tOyjsDCCBwb/view?usp=sharing"
+                "https://drive.google.com/file/d/18qZHl4Z4LIT_flsM6RBaVQ6sy8Gl9jPJ/view?usp=sharing"
               )
             }
           >
