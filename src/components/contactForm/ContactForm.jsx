@@ -1,5 +1,5 @@
-import { Button, TextField } from "@material-ui/core";
-import React from "react";
+import { LoadingButton, TextField } from "@material-ui/core";
+import React, { useState } from "react";
 import { useFormControls } from "./ContactFormControls";
 
 const inputFieldValues = [
@@ -23,6 +23,7 @@ const inputFieldValues = [
 ];
 
 export const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
   const { handleInputValue, handleFormSubmit, formIsValid, errors } =
     useFormControls();
 
@@ -53,14 +54,16 @@ export const ContactForm = () => {
           />
         );
       })}
-      <Button
+      <LoadingButton
+        loading={loading}
         variant="contained"
         type="submit"
         color="secondary"
         disabled={!formIsValid()}
+        onClick={() => setLoading(true)}
       >
         Send Message
-      </Button>
+      </LoadingButton>
     </form>
   );
 };

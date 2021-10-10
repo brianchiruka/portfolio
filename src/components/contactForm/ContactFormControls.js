@@ -1,18 +1,14 @@
 import { useState } from "react";
-// require("dotenv").config();
-// const sgMail = require("@sendgrid/mail");
-// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import axios from "axios";
 
-const initialFormValues = {
-  fullName: "",
-  email: "",
-  message: "",
-  formSubmitted: false,
-  success: false,
-};
-
-// form validation custom hook
 export const useFormControls = () => {
+  const initialFormValues = {
+    fullName: "",
+    email: "",
+    message: "",
+    formSubmitted: false,
+    success: false,
+  };
   const [values, setValues] = useState(initialFormValues);
   const [errors, setErrors] = useState({});
 
@@ -90,30 +86,14 @@ export const useFormControls = () => {
     message: values.message,
   };
 
-  const PostContactForm = async (msg, successCallback, errorCallback) => {
+  const PostContactForm = () => {
     // do stuff
     // if successful
 
-    fetch("/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "text",
-      },
-      body: JSON.stringify(
-        msg
-        // msg.name,
-        // msg.email,
-        // msg.subject,
-        // msg.message,
-      ),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert(data.message);
-        // setMessage("");
-        // setName("");
-        // setSubject("");
-        // setEmail("");
+    axios
+      .post("/send", msg)
+      .then((res) => {
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
