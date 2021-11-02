@@ -29,7 +29,7 @@ function App() {
       <Router>
         {sideNav && <SideLinks />}
         <Container maxWidth="lg">
-          <div style={{ marginLeft: 20, marginRight: 20, overflow: "hidden" }} id="home">
+          <div style={{ marginLeft: 20, marginRight: 20 }} id="home">
             <Navbar />
             <Hero />
             <Work />

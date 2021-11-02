@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <>
       <Grid container justifyContent="center" className={classes.sectionMargin}>
-        <Grid item lg={9} sm={12} style={{ flexGrow: 3 }}>
+        <Grid item lg={9} md={9} sm={12} style={{ flexGrow: 3 }}>
           <Typography variant="h1">
             <motion.p variants={heading} initial="hidden" animate="show">
               Hi, I'm Brian,
@@ -74,7 +74,7 @@ const Hero = () => {
           </Typography>
           <br />
         </Grid>
-        <Grid item lg={3} md={12} sm={12}>
+        <Grid item lg={3} md={3} sm={12}>
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
