@@ -4,9 +4,9 @@ export default makeStyles((theme) => ({
   modal: {
     position: "relative",
     height: 715,
-    width: 515,
-    bottom: 140,
-    right: 32,
+    width: 498,
+    bottom: 130,
+    right: 25,
     justifyContent: "center",
     alignItems: "center",
     opacity: 0,
