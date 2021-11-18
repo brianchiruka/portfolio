@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
   project: {
     position: "relative",
-    height: "68%",
+    height: "40rem",
     width: "75%",
     borderRadius: "2.5%",
     paddingTop: 50,
@@ -20,9 +20,9 @@ export default makeStyles((theme) => ({
   },
 
   projectImage: {
-    // width: 360,
     width: "68%",
-    marginLeft: 50,
+    height: "68%",
+    marginLeft: "10%",
     position: "absolute",
   },
 
@@ -34,8 +34,8 @@ export default makeStyles((theme) => ({
       WebkitTransform: "rotate(0.75turn)",
       OTransform: "rotate(0.75turn)",
       MsTransform: "rotate(0.75turn)",
-      bottom: 230,
-      left: 170,
+      bottom: "68%",
+      left: "60%",
     },
   },
 
@@ -48,7 +48,7 @@ export default makeStyles((theme) => ({
       OTransform: "rotate(0.75turn)",
       MsTransform: "rotate(0.75turn)",
       bottom: 510,
-      left: 300,
+      left: "58%",
     },
   },
 }));

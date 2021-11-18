@@ -8,6 +8,7 @@ export const Card = ({ title, subtitle, img, demo, code }) => {
   const animateFrom = { y: -8 };
   const animateTo = { y: 0 };
   const classes = useStyles();
+
   return (
     <>
       <Box border={3} borderRadius={26} className={classes.project}>
