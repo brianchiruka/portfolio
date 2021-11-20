@@ -75,7 +75,7 @@ export const useFormControls = () => {
     const isValid =
       Object.values(errors).every((x) => x === "") && formIsValid();
     if (isValid) {
-      await PostContactForm(msg, handleSuccess, handleError);
+      await PostContactForm(msg);
     }
   };
 
@@ -86,17 +86,18 @@ export const useFormControls = () => {
     message: values.message,
   };
 
-  const PostContactForm = () => {
-    // do stuff
-    // if successful
-
+  const PostContactForm = (msg) => {
     axios
       .post("/send", msg)
       .then((res) => {
-        console.log(res.data);
+        if (res.data) {
+          console.log(res.data);
+          handleSuccess;
+        }
       })
       .catch((err) => {
         console.log(err);
+        handleError;
       });
   };
 
